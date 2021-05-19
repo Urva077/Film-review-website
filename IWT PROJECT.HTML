@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>
+            page index 1
+        </title>
+    </head>
+    <style>
+        
+        h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color:skyblue;
+            font-style: italic;
+            font-weight: lighter;
+            text-align: center;
+            margin-top: 50px;
+        }
+                 
+                 
+                 input{
+                     
+                     color: black;
+                 }
+                 fieldset{
+                     text-align: center;
+                     color: yellow;
+                     width: 600px;
+                     margin-top: 50pt;
+                      }
+                td{
+                    text-align: left;
+                    color:white;
+                }
+                #button{
+                    width: 150pt;
+                    height: 50pt;
+                    background-color: rebeccapurple;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size:initial;
+                    font-weight:bold;
+                }
+                .back{
+                    background-image: url(file:///C:/Users/HP/Desktop/IWT%20PROJECT/LOGIN/review.jpg);
+                    background-repeat: no-repeat;
+                    background-size:100%;
+
+                }
+                
+
+    </style>
+    <script>
+        function validateForm()
+        {
+         var name=document.forms["SSR"]["name"].value;
+         var phone=document.forms["SSR"]["mobile"].value;
+         var email=document.forms["SSR"]["email"].value;
+         var password=document.forms["SSR"]["password"].value;
+         if(!name.checkValidity()){
+             alert('Please fill out the name field');
+             return false;
+         }
+         if(!phone.checkValidity()){
+             alert('Please fill out the mobile number');
+             return false;
+         }  
+         if(!email.checkValidity()){
+             alert('Please fill out the email');
+             return false;
+         } 
+         if(!password.checkValidity()){
+             alert('Please fill out the password');
+             return false;
+         }
+         
+        }
+    </script>
+    <body class="back">
+        <h1>SSR Film Reviews</h1>
+        <center><fieldset>
+            <legend>
+                Please sign up to continue: &#128515;
+            </legend>
+            <form name="SSR" method="GET" onsubmit="validateForm()" action="C:\Users\HP\Desktop\IWT PROJECT\LOGIN\IWT PROJECT 1.HTML"><center><table><tr><td><br></td></tr>
+                <tr>
+                <td><label for="name">Enter name:</label></td>
+                <td><input type="text" id="name" name="name" maxlength="20" autocomplete="off" required><br></td></tr><tr><td><br></td></tr>
+                <tr><td><label for="email">Enter e-mail id:</label></td>
+                <td><input type="email" id="email" name="email" placeholder="xyz@uvx.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off" required></td>
+                </tr><tr><td><br></td></tr>
+                <tr><td>
+                    <label for="tel">Enter mobile Number:</label>
+                </td>
+                <td><input type="text" id="mobile" placeholder="123-456-7891" name="mobile" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="13" autocomplete="off" required></td>
+            </tr><tr><td><br></td></tr>
+            <tr>
+                <td>
+                    <label for="password">Create a password</label>
+                </td>
+                <td>
+                    <input type="password" id="password" name="password" value=""autocomplete="off" minlength="6" required>
+                </td>
+            </tr>
+        </tr>
+            <tr><td><br></td></tr>         
+            <tr><td><br></td></tr>
+            <tr><td><br></td></tr>
+            <tr><td><br></td></tr>
+        </table>
+                <button id="button" onclick="validateForm()" >Submit</button>
+                
+            </center>
+            </form>
+        </fieldset></center>
+    </body>
+</html>
